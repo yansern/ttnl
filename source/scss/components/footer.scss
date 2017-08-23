@@ -1,0 +1,16 @@
+#app-footer {
+  .navbar-brand {
+    margin: 0 auto; // align social icons to center
+    justify-content: center;
+  }
+}
+
+.app-footer {
+
+  .navbar-item,
+  .navbar-link {
+    svg.navbar-icon {
+      fill: $white;
+    }
+  }
+}

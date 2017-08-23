@@ -1,0 +1,25 @@
+// VARIABLES
+// 1. Bulma's Initial Variables
+// 2. App Variables
+// 3. App Bulma Overrides
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "bulma/utilities/variables";
+
+// FRAMEWORK
+// 1. Bulma
+// 2. App Bulma Overrides
+@import "../../node_modules/bulma/bulma";
+@import "bulma/components/navbar";
+@import "bulma/elements/button";
+@import "bulma/elements/form";
+
+// APP
+@import "base/helpers";
+@import "components/app";
+@import "components/header";
+@import "components/footer";
+@import "components/section";
+@import "components/carousel";
+@import "components/instacards";
+@import "views/home";
+@import "views/contact";

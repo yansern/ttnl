@@ -1,0 +1,20 @@
+.hero-body {
+  padding: 6rem 1.5rem;
+}
+
+.bg-winter {
+  background-size: cover;
+  background-position: top;
+
+  @include mobile {
+    background-image: url(../assets/img/winter-mobile.jpg);
+  }
+
+  @include tablet {
+    background-image: url(../assets/img/winter-tablet.jpg);
+  }
+
+  @include desktop {
+    background-image: url(../assets/img/winter-desktop.jpg);
+  }
+}

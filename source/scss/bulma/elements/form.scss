@@ -1,0 +1,35 @@
+.help {
+  background: $tam-grey-dark;
+  color: $white !important; // Overrides all other help states
+  font-weight: $weight-light;
+  margin: 0;
+  padding: $control-padding-vertical $control-padding-horizontal;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: " ";
+    height: 0;
+    width: 0;
+    bottom: 100%;
+    left: $control-padding-horizontal;
+    pointer-events: none;
+    border: solid transparent;
+    border-color: transparent;
+    border-bottom-color: $tam-grey-dark;
+    border-width: $control-padding-vertical;
+    margin-left: $control-padding-vertical;
+  }
+}
+
+.input,
+.textarea {
+  font-weight: $weight-light;
+  line-height: (26/18);
+  height: auto;
+}
+
+.textarea {
+  padding: $control-padding-vertical $control-padding-horizontal;
+}
+

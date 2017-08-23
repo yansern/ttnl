@@ -1,0 +1,43 @@
+$instacard-gutter-width: 15px;
+
+.instacards {
+  column-count: 3;
+  column-gap: $instacard-gutter-width;
+  column-fill: auto;
+  margin-bottom: $instacard-gutter-width * -1;
+}
+
+.instacard {
+  column-break-inside: avoid;
+  display: inline-block;
+  margin-bottom: $instacard-gutter-width;
+  width: 100%;
+
+  .card {
+    width: 100%;
+  }
+
+  .card-content {
+    font-size: $size-7;
+    padding: $size-7;
+    color: $grey;
+  }
+}
+
+@include mobile {
+  .instacards {
+    column-count: 1;
+  }
+}
+
+@include tablet {
+  .instacards {
+    column-count: 2;
+  }
+}
+
+@include desktop {
+  .instacards {
+    column-count: 3;
+  }
+}

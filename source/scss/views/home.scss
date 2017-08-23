@@ -1,0 +1,48 @@
+#showcase {
+  margin-top: -70px;
+}
+
+.bg-florensis {
+
+  @include mobile {
+    background-image: url(../assets/img/florensis-mobile.jpg);
+  }
+
+  @include tablet {
+    background-image: url(../assets/img/florensis-tablet.jpg);
+  }
+
+  @include desktop {
+    background-image: url(../assets/img/florensis-desktop.jpg);
+  }
+}
+
+.bg-oxxio {
+
+  @include mobile {
+    background-image: url(../assets/img/oxxio-mobile.jpg);
+  }
+
+  @include tablet {
+    background-image: url(../assets/img/oxxio-tablet.jpg);
+  }
+
+  @include desktop {
+    background-image: url(../assets/img/oxxio-desktop.jpg);
+  }
+}
+
+.bg-walibi {
+
+  @include mobile {
+    background-image: url(../assets/img/walibi-mobile.jpg);
+  }
+
+  @include tablet {
+    background-image: url(../assets/img/walibi-tablet.jpg);
+  }
+
+  @include desktop {
+    background-image: url(../assets/img/walibi-desktop.jpg);
+  }
+}

@@ -1,0 +1,16 @@
+// This creates the standard header/main/footer
+// layout with sticky (always-at-the-bottom) footer.
+.app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  main {
+    display: flex;
+    flex: 1 0 auto;
+
+    > section {
+      width: 100%;
+    }
+  }
+}

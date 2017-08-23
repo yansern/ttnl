@@ -1,0 +1,42 @@
+#app-header {
+  .navbar-item,
+  .navbar-link {
+    line-height: (24 / 18);
+    padding: #{(20 / 18)}em #{(18 / 18)}em;
+  }
+
+  position: relative;
+  z-index: 100;
+}
+
+@include touch {
+  #app-header {
+    .navbar-brand {
+      .navbar-item {
+        margin: 0 auto; // center align logo
+      }
+    }
+    .navbar-burger {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+
+    .navbar-menu {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: $black;
+      z-index: 10;
+      border-top: 2px solid $white;
+    }
+  }
+}

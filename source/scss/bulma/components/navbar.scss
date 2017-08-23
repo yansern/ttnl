@@ -1,0 +1,43 @@
+// Tweaks bulma's navbar component
+
+// Fixes navbar in bulma having hover-color on mobile layout.
+a.navbar-item,
+.navbar-link {
+  &:hover,
+  &.is-active {
+    background-color: $navbar-item-hover-background-color;
+  }
+  &:hover {
+    color: $navbar-item-hover-color;
+  }
+  &.is-active {
+    color: $navbar-item-active-color;
+  }
+}
+
+// Also support svg icons
+a.navbar-item,
+.navbar-link {
+
+  svg.navbar-icon {
+    // fill: $navbar-item-color;
+    fill: $white;
+  }
+
+  &:hover,
+  &.is-active {
+    svg.navbar-icon {
+      fill: $navbar-item-hover-background-color;
+    }
+  }
+  &:hover {
+    svg.navbar-icon {
+      fill: $navbar-item-hover-color;
+    }
+  }
+  &.is-active {
+    svg.navbar-icon {
+      fill: $navbar-item-active-color;
+    }
+  }
+}

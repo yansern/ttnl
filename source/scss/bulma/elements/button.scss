@@ -1,0 +1,19 @@
+.button {
+  border-radius: 2em;
+  height: auto;
+  padding-bottom: $control-padding-vertical;
+  padding-left: $control-padding-horizontal;
+  padding-right: $control-padding-horizontal;
+  padding-top: $control-padding-vertical;
+
+  &.is-small {
+    border-radius: 2em;
+  }
+
+  &.is-primary {
+      &:hover,
+      &.is-hovered {
+        background-color: $tam-red-light;
+      }
+  }
+}

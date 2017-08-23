@@ -1,0 +1,266 @@
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.carousel-overlay {
+  width: 100%;
+  position: relative;
+  top: 50%; // cosmetic
+  z-index: 2;
+  margin-top: -70px;
+}
+
+.carousel-menu {
+  text-align: center;
+
+  button {
+    height: 40px;
+    font-size: $size-7;
+
+    &:before {
+      display: inline-block;
+      content: " ";
+    }
+
+    &:hover {
+      background: $tam-red !important;
+    }
+  }
+}
+
+.carousel-open {
+  margin: 0 20px;
+
+  span {
+    display: inline-block;
+    padding: 0 30px;
+    position: relative;
+    top: -2px;
+  }
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 30%;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.2+100 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#33000000',GradientType=0 ); /* IE6-9 */
+  }
+
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: top;
+    z-index: 1;
+  }
+}
+
+.carousel-prev,
+.carousel-next {
+  width: 40px;
+  height: 40px;
+
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+}
+
+.carousel-prev {
+  svg {
+    margin-left: -5px;
+    margin-top: -6px;
+  }
+}
+
+.carousel-next {
+  svg {
+    margin-left: -3px;
+    margin-top: -6px;
+  }
+}
+
+.carousel-exit {
+  position: absolute;
+  bottom: 3rem;
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+
+  button {
+    width: 54px;
+    height: 54px;
+    position: relative;
+    display: none;
+
+    svg {
+      position: absolute;
+      left: 50%;
+
+      &.mouse {
+        margin-left: -11px;
+        top: 9px;
+      }
+
+      &.arrow-down {
+        position: absolute;
+        bottom: -18px;
+        margin-left: -7px;
+      }
+
+      &.arrow-down-double {
+        margin-left: -6px;
+        top: 18px;
+      }
+    }
+  }
+}
+
+.carousel-scroll-exit,
+.carousel-swipe-exit {
+
+  svg {
+    fill: $black;
+  }
+
+  &:hover {
+    svg {
+      fill: $tam-red;
+    }
+  }
+}
+
+@include mobile {
+  button.carousel-swipe-exit {
+    display: inline-block;
+  }
+}
+
+@include tablet {
+  button.carousel-swipe-exit {
+    display: inline-block;
+  }
+}
+
+@include desktop {
+  button.carousel-swipe-exit {
+    display: none;
+  }
+
+  button.carousel-scroll-exit {
+    display: inline-block;
+  }
+}
+
+
+.translate-enter {
+  transform: translateX(100vw);
+}
+
+.translate-enter.translate-enter-active {
+  transform: translateX(0);
+  transition: all 500ms ease-in-out;
+}
+
+.translate-leave {
+    transform: translateX(0);
+}
+
+.translate-leave.translate-leave-active {
+    transform: translateX(-100vw);
+  transition: all 500ms ease-in-out;
+}
+
+.scale-appear, .blur-appear, .rotate-appear, .translate-appear{
+  filter: grayscale(100%);
+  transition: all 1000ms ease-in-out;
+}
+
+.scale-appear.scale-appear-active, .blur-appear.blur-appear-active, .rotate-appear.rotate-appear-active, .translate-appear.translate-appear-active{
+  filter: grayscale(0);
+}
+.scale-enter {
+  transform: scale(1);
+}
+
+.scale-enter.scale-enter-active {
+  transform: scale(1);
+  transition: all 500ms ease-in-out;
+}
+
+.scale-leave {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.scale-leave.scale-leave-active {
+    transform: scale(1.2);
+  opacity: .01;
+  transition: all 500ms ease-in-out;
+}
+
+.blur-enter {
+  transform: scale(1);
+}
+
+.blur-enter.blur-enter-active {
+  transform: scale(1);
+  transition: all 500ms ease-in-out;
+}
+
+.blur-leave {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.blur-leave.blur-leave-active {
+  filter: blur(40px);
+  opacity: .01;
+  transition: all 500ms ease-in-out;
+}
+
+.rotate-enter {
+  filter: hue-rotate(-180deg);
+  opacity: .01;
+}
+
+.rotate-enter.rotate-enter-active {
+    filter: hue-rotate(0deg);
+  opacity: 1;
+  transition: all 500ms ease-in-out;
+}
+
+.rotate-leave {
+      filter: hue-rotate(0deg);
+  opacity: 1;
+}
+
+.rotate-leave.rotate-leave-active {
+  filter: hue-rotate(180deg);
+  opacity: .01;
+  transition: all 500ms ease-in-out;
+}

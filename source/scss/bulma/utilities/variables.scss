@@ -1,0 +1,57 @@
+// TamTam's colors
+$tam-black: #000000;
+$tam-red: #FD5454;
+$tam-red-light: #FF7676;
+$tam-green: #7BDB4C;
+$tam-blue: #789199;
+$tam-grey-dark: #555D60;
+$tam-grey: #8E8E8E;
+
+// Colors
+$black: $tam-black;
+$grey-dark: $tam-grey-dark;
+$grey: $tam-grey;
+$blue: $tam-blue;
+$green: $tam-green;
+
+// Primary colors
+$primary: $tam-red;
+
+// Typography
+$family-sans-serif: "Lato", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+// TamTam's font sizes are:
+// 50, 40, 30, 24, 20, 18 (base), 15
+$body-size: 18px;
+$size-1: #{( 50px / $body-size )}rem;
+$size-2: #{( 40px / $body-size )}rem;
+$size-3: #{( 30px / $body-size )}rem;
+$size-4: #{( 24px / $body-size )}rem;
+$size-5: #{( 20px / $body-size )}rem;
+$size-6: #{( 18px / $body-size )}rem;
+$size-7: #{( 15px / $body-size )}rem;
+
+// Responsiveness
+// TamTam's site widest screen is desktop.
+// There's no difference in desktop hd in the mockup.
+$widescreen: $desktop;
+$fullhd: $desktop;
+
+// Navbar (bulma/components/navbar)
+$navbar-background-color: $tam-black;
+$navbar-item-color: $tam-grey-dark;
+$navbar-item-hover-color: $tam-red;
+$navbar-item-hover-background-color: transparent;
+$navbar-item-active-color: $white;
+
+// Controls (bulma/utilities/controls)
+$control-radius: 0;
+$control-radius-small: 0;
+$control-padding-vertical: #{(10/18)}em;
+$control-padding-horizontal: #{(20/18)}em;
+
+// Form (bulma/utilities/forms)
+$input-border-color: transparent;
+$input-shadow: none;
+$input-hover-border-color: transparent;
+$input-focus-border-color: transparent;
